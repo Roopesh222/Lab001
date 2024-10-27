@@ -39,7 +39,7 @@ virtual_machine_variable = {
     size                 = "Standard_F2"
     admin_username       = "username01"
     admin_password       = "helloword1234!"
-    computer_name     =     "computername"
+    computer_name        = "computername"
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
     publisher            = "MicrosoftWindowsServer"
@@ -62,7 +62,7 @@ inbound_rule_variable = {
     priority                           = 100
     protocol                           = "Tcp"
   }
- 
+
   "inbound-rule1" = {
     inbound_source_port_range          = "*"
     inbound_destination_port_range     = 443
@@ -75,7 +75,7 @@ inbound_rule_variable = {
     priority                           = 101
     protocol                           = "Tcp"
   }
- 
+
   "inbound-rule2" = {
     inbound_source_port_range          = "*"
     inbound_destination_port_range     = 21
@@ -88,7 +88,7 @@ inbound_rule_variable = {
     priority                           = 102
     protocol                           = "Tcp"
   }
- 
+
   "inbound-rule3" = {
     inbound_source_port_range          = "*"
     inbound_destination_port_range     = 23

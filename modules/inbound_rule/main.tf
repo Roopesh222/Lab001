@@ -1,5 +1,5 @@
 resource "azurerm_network_security_rule" "nsg_inbound_rule" {
-  for_each = var.inbound_rule_variable
+  for_each                    = var.inbound_rule_variable
   name                        = each.value["name"]
   priority                    = each.value["priority"]
   direction                   = each.value["direction"]

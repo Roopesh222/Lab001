@@ -37,7 +37,7 @@ variable "virtual_machine_variable" {
     size                 = string
     admin_username       = string
     admin_password       = string
-        computer_name        = string
+    computer_name        = string
     caching              = string
     storage_account_type = string
     publisher            = string
@@ -54,14 +54,14 @@ variable "nsg_variable" {
 }
 variable "inbound_rule_variable" {
   type = map(object({
-    name                      = string
-    priority                  = number
-    direction                 = string
-    access                    = string
-    protocol                  = string
-    inbound_source_port_range = string
-    inbound_destination_port_range = number
-    inbound_source_address_prefix = string
+    name                               = string
+    priority                           = number
+    direction                          = string
+    access                             = string
+    protocol                           = string
+    inbound_source_port_range          = string
+    inbound_destination_port_range     = number
+    inbound_source_address_prefix      = string
     inbound_destination_address_prefix = string
     network_security_group_name        = string
   }))

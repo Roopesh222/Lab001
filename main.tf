@@ -41,21 +41,21 @@ module "virtual_machine" {
   location                 = var.location
   resource_group_name      = var.resource_group_name
   virtual_machine_variable = var.virtual_machine_variable
-  depends_on              = [module.rg_module, module.subnet_module, module.nic_card]
+  depends_on               = [module.rg_module, module.subnet_module, module.nic_card]
 }
 
 ##################### NSG ##########################
 module "nsg_module" {
-  source = "./modules/NSG"
-  location = var.location
+  source              = "./modules/NSG"
+  location            = var.location
   resource_group_name = var.resource_group_name
-  nsg_variable = var.nsg_variable
-  depends_on = [ module.rg_module ]
+  nsg_variable        = var.nsg_variable
+  depends_on          = [module.rg_module]
 }
 module "inbound" {
   source                = "./modules/inbound_rule"
   inbound_rule_variable = var.inbound_rule_variable
-  resource_group_name = var.resource_group_name
-  depends_on = [ module.nsg_module, module.rg_module ]
+  resource_group_name   = var.resource_group_name
+  depends_on            = [module.nsg_module, module.rg_module]
 }
 
